@@ -209,10 +209,10 @@ function winGame() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
     document.getElementById('backgroundImage').classList.add('fade-out');
-    victoryImage.style.opacity = 0;
     setTimeout(() => {
-        victoryImage.classList.add('fade-in');
-        victoryImage.style.opacity = 1;
+        document.getElementById('backgroundImage').style.display = 'none';
+        document.getElementById('victoryImage').style.display = 'block';
+        document.getElementById('victoryImage').classList.add('fade-in');
         const message = `Lograste la 6ta junto a Diego, en ${Math.floor(totalTime / 1000)} segundos`;
         displayGameOverText(message);
     }, 2000);
