@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <img id="backgroundImage" src="background.png" alt="Background Image">
+        <img id="victoryImage" src="victory.jpg" alt="Victory Image" style="display:none;">
+        <div id="headerText" class="info-line">Ayuda a Diego a ganar la Sexta</div>
+        <div id="record" class="info-line" style="display: none;">Record: 0</div>
+        <div id="gameInfo" class="info-line" style="display: none;">
+            <div id="score">Puntaje: 0</div>
+            <div id="timer">Tiempo: <span id="seconds">0</span>.<span id="centiseconds">00</span></div>
+        </div>
+        <canvas id="gameCanvas"></canvas>
+        <div id="initialScreen">
+            <input type="text" id="twitterUser" placeholder="Usuario Twitter">
+            <button id="submitTwitterUser">Enviar</button>
+        </div>
+        <div id="startScreen" style="display: none;">
+            <button id="startButton">Start Game</button>
+        </div>
+        <div id="gameOverScreen" style="display: none;">
+            <div id="gameOverText"></div>
+            <button id="restartButton">Reiniciar Juego</button>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>

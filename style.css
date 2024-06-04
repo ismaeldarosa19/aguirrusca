@@ -1,0 +1,156 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    flex-direction: column;
+}
+
+.game-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 90%;
+    max-width: 800px;
+    height: auto;
+    aspect-ratio: 1;
+    overflow: hidden;
+    border: 1px solid yellow; /* Cambiar color del borde a amarillo */
+}
+
+canvas {
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+}
+
+#initialScreen, #startScreen, #gameOverScreen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente para asegurar que el texto sea legible */
+}
+
+#headerText {
+    font-size: 36px;
+    color: yellow;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive; /* Fuente divertida */
+}
+
+#twitterUser {
+    padding: 10px;
+    font-size: 16px;
+}
+
+#submitTwitterUser {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+#startButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.info-line {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 800px;
+    font-size: 30px;
+    color: yellow;
+    margin-bottom: 10px;
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive; /* Fuente divertida */
+}
+
+#record {
+    text-align: center;
+    width: 100%;
+}
+
+#score {
+    text-align: left;
+}
+
+#timer {
+    text-align: right;
+    width: 200px; /* Ancho fijo para evitar el movimiento */
+}
+
+#gameOverText {
+    font-size: 18px; /* Reducir el tamaño del texto */
+    color: yellow;  /* Asegurar que el texto sea amarillo */
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive; /* Fuente divertida */
+    background-color: black;
+    padding: 20px;
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 80%; /* Para evitar que el texto se extienda demasiado */
+}
+
+#restartButton {
+    font-size: 18px; /* Reducir el tamaño del texto */
+    color: yellow;
+    background-color: black;
+    border: 2px solid yellow;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+    position: absolute;
+    top: 55%;  /* Ajustar según sea necesario */
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.grayscale {
+    filter: grayscale(100%);
+    transition: filter 2s ease;
+}
+
+#backgroundImage, #victoryImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 0; /* Asegurar que la imagen de victoria comience oculta */
+}
+
+.fade-out {
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+}
+
+.fade-in {
+    opacity: 1;
+    transition: opacity 2s ease-in-out;
+}
