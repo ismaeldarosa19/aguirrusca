@@ -153,3 +153,41 @@ canvas {
     opacity: 1;
     transition: opacity 2s ease-in-out;
 }
+
+#victoryMessage {
+    font-size: 24px;
+    color: yellow;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo negro con opacidad */
+    padding: 20px;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%; /* Ocupa el 90% del ancho del contenedor */
+    max-width: 800px;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+}
+
+#victoryMessage .title {
+    font-size: 4vw; /* Tamaño de letra relativo al ancho de la ventana */
+    margin-bottom: 10px;
+}
+
+#victoryMessage .score,
+#victoryMessage .ranking {
+    font-size: 3vw; /* Tamaño de letra relativo al ancho de la ventana */
+}
+
+@media (min-width: 600px) {
+    #victoryMessage .title {
+        font-size: 28px; /* Tamaño de letra fijo para pantallas grandes */
+    }
+
+    #victoryMessage .score,
+    #victoryMessage .ranking {
+        font-size: 20px; /* Tamaño de letra fijo para pantallas grandes */
+    }
+}

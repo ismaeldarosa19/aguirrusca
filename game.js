@@ -213,10 +213,16 @@ function winGame() {
         document.getElementById('backgroundImage').style.display = 'none';
         document.getElementById('victoryImage').style.display = 'block';
         document.getElementById('victoryImage').classList.add('fade-in');
-        const message = `Lograste la 6ta junto a Diego, en ${Math.floor(totalTime / 1000)} segundos`;
-        displayGameOverText(message);
+        const message = `
+            <div class="title">Ganaste la Sexta junto a Diego</div>
+            <div class="score">Puntaje: 100</div>
+            <div class="ranking">Ranking: Quedaste 1 en el ranking</div>
+        `;
+        document.getElementById("victoryMessage").innerHTML = message;
+        document.getElementById("victoryMessage").style.opacity = 1;
     }, 2000);
 }
+
 
 document.getElementById("submitTwitterUser").addEventListener("click", function() {
     const twitterUser = document.getElementById("twitterUser").value;
